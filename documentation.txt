@@ -1,0 +1,59 @@
+ARP Spoofing Detector Documentation
+
+1. Introduction:
+   This script monitors ARP (Address Resolution Protocol) tables to detect ARP spoofing attacks. When an attack is detected, it takes action by disconnecting from the network and attempting to reconnect after a delay.
+
+2. Prerequisites:
+   - Python 3.x installed
+   - Required libraries installed:
+     - clint
+     - colorama
+
+   Install dependencies using:
+	pip install colorama
+	pip install clint
+
+
+3. Usage:
+- Run the script using Python:
+  ```
+  python arp_spoof_detector.py
+  ```
+
+4. Configuration:
+- DELAY_TO_CONNECT: Time to wait before automatically reconnecting to the network after an attack is detected.
+- DELAY_TO_SCAN_ON_ATTACKS: Time delay between consecutive ARP scans.
+
+5. Dependencies:
+- clint: Used for terminal color output.
+- colorama: Used for cross-platform colored terminal text.
+
+6. Output:
+- Console Output:
+  - Scanning for attacks messages.
+  - Disconnection and reconnection status.
+  - Spoof attack detected messages.
+
+- Log File (arp_spoof_detector.log):
+  - Logs timestamped events and errors.
+
+7. User Notifications:
+- Console messages are colored for better visibility:
+  - Blue: ARP scan messages.
+  - Red: Spoof attack detected and disconnection messages.
+  - Green: Reconnection messages.
+  - Yellow: Error messages.
+
+8. Limitations:
+- This script focuses on basic ARP spoofing detection and response. It may not cover all possible scenarios and may need adjustments for specific network configurations.
+
+9. Notes:
+- It is recommended to run this script with appropriate permissions to manipulate network settings.
+
+10. Disclaimer:
+ - Use this script responsibly and only on networks you have permission to monitor.
+
+11. Author:
+ - @hsckcom
+ - https://github.com/hsckcom
+
